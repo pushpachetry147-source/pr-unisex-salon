@@ -23,6 +23,7 @@ header{
 
 header h1{font-size:36px;margin:0;}
 header p{color:var(--gray);margin:10px 0 25px;}
+
 nav a{
   margin:0 12px;
   color:#fff;
@@ -66,14 +67,8 @@ section{
   object-fit:cover;
 }
 
-.card h3{
-  margin:15px 0 10px;
-}
-
-.card p{
-  color:var(--gray);
-  padding-bottom:15px;
-}
+.card h3{margin:15px 0 10px;}
+.card p{color:var(--gray);padding-bottom:15px;}
 
 form{
   max-width:400px;
@@ -108,4 +103,4 @@ footer{
   font-weight:bold;
   text-decoration:none;
   z-index:9999;
-}
+                                               }
