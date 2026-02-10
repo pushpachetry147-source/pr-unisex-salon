@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
@@ -23,12 +22,10 @@
     <input type="text" id="name" placeholder="Your Name" required>
     <input type="tel" id="phone" placeholder="Phone Number" required>
 
-    <select id="service">
+    <select id="service" required>
       <option>Hair Cut</option>
       <option>Hair Styling</option>
       <option>Facial</option>
-      <option>Makeup</option>
-      <option>Hair Spa</option>
       <option>Beard Styling</option>
     </select>
 
@@ -44,13 +41,22 @@
 
 <script>
 function sendWhatsApp(){
-  let msg =
-    "Name: " + document.getElementById("name").value +
-    "%0APhone: " + document.getElementById("phone").value +
-    "%0AService: " + document.getElementById("service").value +
-    "%0ADate: " + document.getElementById("date").value;
+  var name = document.getElementById("name").value;
+  var phone = document.getElementById("phone").value;
+  var service = document.getElementById("service").value;
+  var date = document.getElementById("date").value;
 
-  window.open("https://wa.me/918414916341?text=" + msg);
+  var message =
+    "New Appointment Booking%0A" +
+    "Name: " + name + "%0A" +
+    "Phone: " + phone + "%0A" +
+    "Service: " + service + "%0A" +
+    "Date: " + date;
+
+  window.open(
+    "https://wa.me/918414916341?text=" + message,
+    "_blank"
+  );
 }
 </script>
 
