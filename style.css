@@ -23,7 +23,6 @@ header{
 
 header h1{font-size:36px;margin:0;}
 header p{color:var(--gray);margin:10px 0 25px;}
-
 nav a{
   margin:0 12px;
   color:#fff;
