@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Appointment | PR Unisex Salon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>Book Appointment</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="appointment.html">Appointment</a>
+  </nav>
+</header>
+
+<section>
+  <form onsubmit="sendWhatsApp(); return false;">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="tel" id="phone" placeholder="Phone Number" required>
+
+    <select id="service">
+      <option>Hair Cut</option>
+      <option>Hair Styling</option>
+      <option>Facial</option>
+      <option>Makeup</option>
+      <option>Hair Spa</option>
+      <option>Beard Styling</option>
+    </select>
+
+    <input type="date" id="date" required>
+
+    <button class="btn" type="submit">Confirm on WhatsApp</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 PR Unisex Salon
+</footer>
+
+<script>
+function sendWhatsApp(){
+  let msg =
+    "Name: " + document.getElementById("name").value +
+    "%0APhone: " + document.getElementById("phone").value +
+    "%0AService: " + document.getElementById("service").value +
+    "%0ADate: " + document.getElementById("date").value;
+
+  window.open("https://wa.me/918414916341?text=" + msg);
+}
+</script>
+
+</body>
+</html>
